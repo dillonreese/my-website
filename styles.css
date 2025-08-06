@@ -232,9 +232,10 @@ body {
 }
 
 .btn-primary {
-    background: var(--gradient-primary);
-    color: var(--text-white);
-    box-shadow: var(--shadow-md);
+    background: var(--bg-card);
+    color: var(--text-primary);
+    border: 2px solid var(--border-color);
+    box-shadow: var(--shadow-sm);
 }
 
 .btn-primary:hover {
@@ -246,6 +247,7 @@ body {
     background: var(--bg-card);
     color: var(--text-primary);
     border: 2px solid var(--border-color);
+    box-shadow: var(--shadow-sm);
 }
 
 .btn-secondary:hover {
