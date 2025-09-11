@@ -1,3 +1,3 @@
-# Dillon Reese - Personal Website
+Personal Website
 
-A static webpage for Dillon Reese, serving as a digital business card. Built with HTML, CSS, and JavaScript.
+A static webpage, serving as a digital business card. Built with HTML, CSS, and JavaScript.
