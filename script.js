@@ -233,6 +233,10 @@ window.addEventListener('load', function() {
         const loadTime = performance.timing.loadEventEnd - performance.timing.navigationStart;
         console.log(`Page loaded in ${loadTime}ms`);
     }
+
+    // Show page after all resources loaded to prevent FOUC
+    document.body.style.visibility = 'visible';
+    document.body.style.opacity = '1';
 });
 
 // Add error handling for external resources
@@ -243,20 +247,7 @@ window.addEventListener('error', function(e) {
 });
 
 // Add viewport change handling for responsive design
-let resizeTimer;
-window.addEventListener('resize', function() {
-    clearTimeout(resizeTimer);
-    resizeTimer = setTimeout(function() {
-        // Recalculate any layout-dependent elements
-        const sections = document.querySelectorAll('section');
-        sections.forEach(section => {
-            // Trigger reflow if needed
-            section.style.display = 'none';
-            section.offsetHeight; // Force reflow
-            section.style.display = 'block';
-        });
-    }, 250);
-});
+// Note: Removed forced reflow code that was causing animations to restart on resize
 
 // Add touch support for mobile devices
 if ('ontouchstart' in window) {
@@ -339,4 +330,4 @@ console.log(`
 '',
 'color: #64748b; font-size: 12px;',
 'color: #64748b; font-size: 12px;'
-); 
+);
