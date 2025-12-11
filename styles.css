@@ -107,12 +107,12 @@ body {
     z-index: 2;
     text-align: center;
     width: 100%;
-    max-width: 800px;
+    max-width: 1000px;
     margin: 0 auto;
 }
 
 .hero-text {
-    max-width: 800px;
+    max-width: 900px;
 }
 
 /* Text Animation Styles */
